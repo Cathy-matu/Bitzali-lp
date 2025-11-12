@@ -26,7 +26,7 @@ const Challenge = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-24 bg-background relative overflow-hidden">
+    <section id="about" ref={ref} className="py-24 bg-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 to-transparent" />
       
