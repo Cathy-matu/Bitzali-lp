@@ -2,61 +2,67 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { 
-  BarChart3, 
-  Brain, 
-  Lock, 
+  Package, 
+  TrendingUp, 
+  Users, 
   Smartphone, 
   Zap, 
-  Users,
-  TrendingUp,
-  Database
+  BarChart3,
+  Shield,
+  CreditCard
 } from "lucide-react";
 
-const features = [
+interface FeatureItem {
+  icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  description: string;
+}
+
+const features: FeatureItem[] = [
   {
-    icon: BarChart3,
-    title: "Real-Time Dashboards",
-    description: "Monitor your key metrics with live, customizable dashboards that update instantly."
-  },
-  {
-    icon: Brain,
-    title: "Predictive Analytics",
-    description: "Leverage AI to forecast trends, identify opportunities, and mitigate risks before they materialize."
-  },
-  {
-    icon: Database,
-    title: "Unified Data Hub",
-    description: "Consolidate data from all your sources into one centralized, accessible platform."
-  },
-  {
-    icon: Zap,
-    title: "Automated Insights",
-    description: "Receive intelligent alerts and recommendations without manual analysis."
-  },
-  {
-    icon: Smartphone,
-    title: "Mobile-First Design",
-    description: "Access critical business intelligence on any device, anywhere, anytime."
-  },
-  {
-    icon: Lock,
-    title: "Enterprise Security",
-    description: "Bank-grade encryption and compliance with international data protection standards."
+    icon: Package,
+    title: "Stock Tracking",
+    description: "Monitor stock levels in real-time to ensure you never run out of essential products."
   },
   {
     icon: Users,
-    title: "Collaborative Tools",
-    description: "Share insights, create reports, and collaborate seamlessly across your organization."
+    title: "Customer Behavior Tracking",
+    description: "Analyze purchasing patterns to identify popular products and tailor offerings to customer preferences."
+  },
+  {
+    icon: BarChart3,
+    title: "Instant Reports",
+    description: "Generate real-time sales performance data to aid in informed decision-making for your business."
   },
   {
     icon: TrendingUp,
-    title: "Performance Tracking",
-    description: "Set goals, track progress, and measure ROI with precision and clarity."
+    title: "Easy Data Management",
+    description: "Consolidate customer details, transaction notes, and purchase histories all in one place."
+  },
+  {
+    icon: Smartphone,
+    title: "User-Friendly App",
+    description: "Simple, straightforward digital tool designed specifically for small business owners in Kenya."
+  },
+  {
+    icon: Shield,
+    title: "Data Protection Compliant",
+    description: "Built to navigate evolving government regulations including the Data Protection Act."
+  },
+  {
+    icon: Zap,
+    title: "AI-Powered Insights",
+    description: "Leverage data science to predict demand and provide accurate business insights."
+  },
+  {
+    icon: CreditCard,
+    title: "Credit Facilitation",
+    description: "Future integration with financial institutions to help small businesses access growth financing."
   }
 ];
 
 const Features = () => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
@@ -71,16 +77,17 @@ const Features = () => {
             className="text-center mb-16"
           >
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
-              Features
+              Our Solution
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Everything You Need to{" "}
-              <span className="bg-gradient-to-r from-gradient-start to-gradient-end bg-clip-text text-transparent">
-                Succeed
+              How Inveca{" "}
+              <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+                Transforms Your Business
               </span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Powerful features designed to transform how you understand and grow your business.
+              A straightforward, easy-to-use digital platform that simplifies inventory management 
+              and helps Kenyan businesses attract and retain customers.
             </p>
           </motion.div>
 
@@ -88,13 +95,13 @@ const Features = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <motion.div
-                key={index}
+                key={feature.title}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group bg-card border border-border rounded-2xl p-6 hover:shadow-xl hover:border-primary/50 transition-all duration-300 hover:-translate-y-1"
+                className="group bg-card border border-border rounded-2xl p-6 hover:shadow-lg hover:border-primary/30 transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="bg-gradient-to-br from-primary/10 to-accent/10 w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="bg-primary/10 w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <feature.icon className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">
@@ -107,6 +114,27 @@ const Features = () => {
             ))}
           </div>
 
+          {/* Early Success Banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="mt-12 bg-gradient-to-r from-primary/10 to-blue-600/10 rounded-2xl p-8 border border-primary/20 text-center"
+          >
+            <h3 className="text-xl font-semibold text-foreground mb-2">
+              Already Making an Impact
+            </h3>
+            <p className="text-muted-foreground mb-4">
+              Successfully onboarded agro-vet businesses during testing phase, with plans to reach 
+              over 1,000 businesses across Nairobi's CBD.
+            </p>
+            <div className="flex justify-center items-center gap-6 text-sm text-primary font-medium">
+              <span>✓ Streamlined Operations</span>
+              <span>✓ Actionable Insights</span>
+              <span>✓ Customer Retention</span>
+            </div>
+          </motion.div>
+
           {/* Bottom CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -115,13 +143,13 @@ const Features = () => {
             className="mt-16 text-center"
           >
             <p className="text-muted-foreground mb-4">
-              And that's just the beginning. Discover more features tailored to your industry.
+              Join the growing number of Kenyan small businesses transforming their operations.
             </p>
             <a 
-              href="#contact" 
-              className="text-primary hover:text-accent transition-colors font-semibold inline-flex items-center gap-2"
+              href="https://inveca.co" 
+              className="text-primary hover:text-blue-600 transition-colors font-semibold inline-flex items-center gap-2"
             >
-              Explore Full Feature List
+              Visit Inveca.co to Get Started
               <span>→</span>
             </a>
           </motion.div>
