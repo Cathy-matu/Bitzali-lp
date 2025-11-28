@@ -123,7 +123,7 @@ const Challenge = () => {
             <p className="text-xl font-medium text-foreground">
               Join the digital transformation with{" "}
               <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent font-bold">
-                Inveca's smart inventory solution
+                Biztali's smart inventory solution
               </span>
             </p>
           </motion.div>

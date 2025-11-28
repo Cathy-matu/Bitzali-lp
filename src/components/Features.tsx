@@ -80,7 +80,7 @@ const Features = () => {
               Our Solution
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-              How Inveca{" "}
+              How Biztali{" "}
               <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
                 Transforms Your Business
               </span>
@@ -146,10 +146,10 @@ const Features = () => {
               Join the growing number of Kenyan small businesses transforming their operations.
             </p>
             <a 
-              href="https://inveca.co" 
+              href="https://biztali.com" 
               className="text-primary hover:text-blue-600 transition-colors font-semibold inline-flex items-center gap-2"
             >
-              Visit Inveca.co to Get Started
+              Visit Biztali.com to Get Started
               <span>→</span>
             </a>
           </motion.div>

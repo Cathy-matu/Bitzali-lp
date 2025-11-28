@@ -3,7 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Package, TrendingUp, Users, Smartphone } from "lucide-react";
 
-const IntroducingInveca = () => {
+const IntroducingBiztali = () => {
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -42,7 +42,7 @@ const IntroducingInveca = () => {
               transition={{ duration: 0.6 }}
             >
               <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-6">
-                Meet Inveca
+                Meet Biztali
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
                 Empowering Small Businesses in{" "}
@@ -51,8 +51,8 @@ const IntroducingInveca = () => {
                 </span>
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Founded by Peter Sande and Ian Muthomi, Inveca transforms how micro, small, and medium 
-                enterprises manage operations. Say goodbye to manual notebooks and hello to digital efficiency.
+                Biztali transforms how micro, small, and medium enterprises manage operations. 
+                Say goodbye to manual notebooks and hello to digital efficiency with our comprehensive business management solution.
               </p>
 
               {/* Feature list */}
@@ -79,10 +79,10 @@ const IntroducingInveca = () => {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="bg-card border border-border rounded-xl p-6"
               >
-                <p className="text-foreground font-medium mb-2">Built by Innovators, For Kenyan Businesses</p>
+                <p className="text-foreground font-medium mb-2">Built for Kenyan Business Needs</p>
                 <p className="text-muted-foreground text-sm">
-                  Peter Sande (Data Scientist) and Ian Muthomi (CTO of Visiondrill) combined their expertise 
-                  to create a solution that addresses real challenges faced by local businesses.
+                  Our platform is specifically designed to address the unique challenges faced by local businesses, 
+                  providing intuitive tools that drive growth and efficiency in today's competitive market.
                 </p>
               </motion.div>
             </motion.div>
@@ -95,7 +95,7 @@ const IntroducingInveca = () => {
               className="relative"
             >
               <div className="relative bg-gradient-to-br from-primary/10 to-blue-500/10 rounded-3xl p-8 border border-border backdrop-blur-sm">
-                {/* Inveca app mockup placeholder */}
+                {/* Biztali app mockup placeholder */}
                 <div className="bg-card rounded-xl shadow-2xl overflow-hidden border border-border">
                   <div className="bg-gradient-to-r from-primary to-blue-600 p-4">
                     <div className="flex items-center justify-between">
@@ -104,7 +104,7 @@ const IntroducingInveca = () => {
                         <div className="w-3 h-3 bg-white/60 rounded-full" />
                         <div className="w-3 h-3 bg-white/40 rounded-full" />
                       </div>
-                      <span className="text-white text-sm font-medium">Inveca App</span>
+                      <span className="text-white text-sm font-medium">Biztali App</span>
                       <div className="w-6"></div>
                     </div>
                   </div>
@@ -161,8 +161,8 @@ const IntroducingInveca = () => {
                   transition={{ duration: 3, repeat: Infinity }}
                   className="absolute -top-4 -right-4 bg-card border border-border rounded-xl p-3 shadow-lg"
                 >
-                  <p className="text-xs text-muted-foreground mb-1">Businesses Onboarded</p>
-                  <p className="text-xl font-bold text-primary">3+</p>
+                  <p className="text-xs text-muted-foreground mb-1">Business Growth</p>
+                  <p className="text-xl font-bold text-primary">45%</p>
                 </motion.div>
 
                 <motion.div
@@ -170,8 +170,8 @@ const IntroducingInveca = () => {
                   transition={{ duration: 4, repeat: Infinity }}
                   className="absolute -bottom-4 -left-4 bg-card border border-border rounded-xl p-3 shadow-lg"
                 >
-                  <p className="text-xs text-muted-foreground mb-1">Target Reach</p>
-                  <p className="text-xl font-bold text-green-600">1,000+</p>
+                  <p className="text-xs text-muted-foreground mb-1">Efficiency Boost</p>
+                  <p className="text-xl font-bold text-green-600">60%</p>
                 </motion.div>
               </div>
             </motion.div>
@@ -182,4 +182,4 @@ const IntroducingInveca = () => {
   );
 };
 
-export default IntroducingInveca;
+export default IntroducingBiztali;
